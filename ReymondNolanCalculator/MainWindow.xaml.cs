@@ -24,6 +24,8 @@ namespace ReymondNolanCalculator
         {
             InitializeComponent();
         }
+
+        //declration variable 
         int first_no;
         int second_no;
         int result;
@@ -83,7 +85,7 @@ namespace ReymondNolanCalculator
         {
             first_no = Int32.Parse(TB_Display.Text);
             TB_Display.Text = "0";
-            operation = '+'; // test fhdth nfgjhgfjh
+            operation = '+';
         }
 
         private void BTN_Moins_Click(object sender, RoutedEventArgs e)
