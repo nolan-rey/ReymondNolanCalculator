@@ -83,7 +83,7 @@ namespace ReymondNolanCalculator
         {
             first_no = Int32.Parse(TB_Display.Text);
             TB_Display.Text = "0";
-            operation = '+';
+            operation = '+'; // test fhdth nfgjhgfjh
         }
 
         private void BTN_Moins_Click(object sender, RoutedEventArgs e)
