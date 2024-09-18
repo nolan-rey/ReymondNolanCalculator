@@ -28,7 +28,7 @@ namespace ReymondNolanCalculator
         //declration variable 
         int first_no;
         int second_no;
-        int result;
+        double result;
         char operation;
 
         private void BTN_1_Click(object sender, RoutedEventArgs e)
@@ -116,6 +116,31 @@ namespace ReymondNolanCalculator
             TB_Display.Text = "0";
         }
 
+        private void BTN_COS_Click(object sender, RoutedEventArgs e)
+        {
+            first_no = Int32.Parse(TB_Display.Text);
+            operation = 'c';
+        }
+
+        private void BTN_SIN_Click(object sender, RoutedEventArgs e)
+        {
+            first_no = Int32.Parse(TB_Display.Text);
+            operation = 's';
+        }
+
+        private void BTN_TAN_Click(object sender, RoutedEventArgs e)
+        {
+            first_no = Int32.Parse(TB_Display.Text);
+            operation = 't';
+        }
+
+        private void BTN_POWER_Click(object sender, RoutedEventArgs e)
+        {
+            first_no = Int32.Parse(TB_Display.Text);
+            TB_Display.Text = "0";
+            operation = '^';
+        }
+
         private void BTN_Equals_Click(object sender, RoutedEventArgs e)
         {
             second_no = Int32.Parse(TB_Display.Text);
@@ -140,6 +165,22 @@ namespace ReymondNolanCalculator
                     result = first_no / second_no;
                     TB_Display.Text = result.ToString();
                     break;
+
+                case 's':
+                    TB_Display.Text = Math.Sin(first_no).ToString();
+                    break;
+
+                case 'c':
+                    TB_Display.Text = Math.Cos(first_no).ToString();
+                    break;
+
+                case 't':
+                    TB_Display.Text = Math.Tan(first_no).ToString();
+                    break;
+
+                case '^':
+                    TB_Display.Text = Math.Pow(first_no, second_no).ToString();
+                    break;
             }
         }
 
@@ -154,7 +195,5 @@ namespace ReymondNolanCalculator
                 TB_Display.Text = TB_Display.Text + num;
             }
         }
-
-        
     }
 }
