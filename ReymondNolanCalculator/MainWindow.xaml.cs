@@ -25,13 +25,14 @@ namespace ReymondNolanCalculator
             InitializeComponent();
         }
 
-        //declration variable 
+        //déclaration variable 
         float first_no;
         float second_no;
         float result;
         char operation;
         const double PI = 3.1415926535897931;
 
+        //Event pour chaque bouton
         private void BTN_1_Click(object sender, RoutedEventArgs e)
         {
             display("1");
@@ -203,20 +204,7 @@ namespace ReymondNolanCalculator
            
         }
 
-        private void BTN_Ln_Click(object sender, RoutedEventArgs e)
-        {
-            if (String.IsNullOrEmpty(TB_Display.Text))
-            {
-                TB_Display.Text = "Error";
-            }
-            else
-            {
-                first_no = float.Parse(TB_Display.Text);
-                operation = '%';
-            }
-           
-        }
-
+        //Event pour le bouton Egale
         private void BTN_Equals_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(TB_Display.Text))
@@ -269,6 +257,8 @@ namespace ReymondNolanCalculator
             
         }
 
+
+        //Fonction pour verifier si un 0 est afficher dans le text ou pas 
         public void display(string num)
         {
             if (TB_Display.Text == "0")

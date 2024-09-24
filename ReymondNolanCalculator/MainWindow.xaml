@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="Calculator" Height="600" Width="900">
     <Grid Background="#DAE1E1">
-        <Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions> <!--Initialisation colonne tableau-->
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
+        <Grid.RowDefinitions> <!--Initialisation ligne tableau-->
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -23,8 +23,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid.Resources>
-            <Style TargetType="{x:Type Button}">
+        <Grid.Resources> 
+            <Style TargetType="{x:Type Button}"> <!--Tout les styles des boutons-->
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="Background" Value="#D9D9D9"/>
                 <Setter Property="FontSize" Value="38"/>
@@ -38,7 +38,7 @@
                 </Style.Resources>
   
             </Style>
-            <Style x:Key="MyStyleGreen" TargetType="{x:Type Control}">
+            <Style x:Key="MyStyleGreen" TargetType="{x:Type Control}"> <!--Tout les styles des boutons d'operation-->
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="Background" Value="#B5C8C6"/>
                 <Setter Property="FontSize" Value="38"/>
@@ -49,7 +49,7 @@
                     </Style>
                 </Style.Resources>
             </Style>
-            <Style x:Key="MyStyleRed" TargetType="{x:Type Control}">
+            <Style x:Key="MyStyleRed" TargetType="{x:Type Control}"> <!--Non utiliser-->
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="Background" Value="#FFD42828"/>
                 <Setter Property="FontSize" Value="38"/>
@@ -60,7 +60,7 @@
                     </Style>
                 </Style.Resources>
             </Style>
-            <Style x:Key="MyStyleBlue" TargetType="{x:Type Control}">
+            <Style x:Key="MyStyleBlue" TargetType="{x:Type Control}"> <!--Non utiliser-->
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="Background" Value="#FF00D6FF"/>
                 <Setter Property="FontSize" Value="38"/>
@@ -73,28 +73,28 @@
             </Style>
         </Grid.Resources>
 
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" Name="TB_Display" Background="#D7FFFC" FontSize="40"></TextBlock>
-        <!-- Raw1-->
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" Name="TB_Display" Background="#D7FFFC" FontSize="40"></TextBlock>  <!--Zone de text pour afficher les valeurs et le resultat-->
+        <!-- Ligne1-->
         <Button Grid.Row="1" Grid.Column="0" Name="BTN_1" Content="1" Click="BTN_1_Click"/>
         <Button Grid.Row="1" Grid.Column="1" Name="BTN_2" Content="2" Click="BTN_2_Click"/>
         <Button Grid.Row="1" Grid.Column="2" Name="BTN_3" Content="3" Click="BTN_3_Click"/>
         <Button Grid.Row="1" Grid.Column="3" Name="BTN_PLus" Style="{StaticResource MyStyleGreen}" Content="+" Click="BTN_PLus_Click"/>
-
+         <!--ligne2-->
         <Button Grid.Row="2" Grid.Column="0" Name="BTN_4" Content="4" Click="BTN_4_Click"/>
         <Button Grid.Row="2" Grid.Column="1" Name="BTN_5" Content="5" Click="BTN_5_Click"/>
         <Button Grid.Row="2" Grid.Column="2" Name="BTN_6" Content="6" Click="BTN_6_Click"/>
         <Button Grid.Row="2" Grid.Column="3" Name="BTN_Moins" Style="{StaticResource MyStyleGreen}" Content="-" Click="BTN_Moins_Click"/>
-
+        <!--ligne3-->
         <Button Grid.Row="3" Grid.Column="0" Name="BTN_7" Content="7" Click="BTN_7_Click"/>
         <Button Grid.Row="3" Grid.Column="1" Name="BTN_8" Content="8" Click="BTN_8_Click"/>
         <Button Grid.Row="3" Grid.Column="2" Name="BTN_9" Content="9" Click="BTN_9_Click"/>
         <Button Grid.Row="3" Grid.Column="3" Name="BTN_Mult" Style="{StaticResource MyStyleGreen}" Content="*" Click="BTN_Mult_Click"/>
-
+        <!--ligne4-->
         <Button Grid.Row="4" Grid.Column="0" Name="BTN_0" Content="0" Click="BTN_0_Click"/>
         <Button Grid.Row="4" Grid.Column="1" Name="BTN_CLEAR" Style="{StaticResource MyStyleGreen}"  Content="CLR" Click="BTN_CLEAR_Click"/>
         <Button Grid.Row="4" Grid.Column="2" Name="BTN_Equals" Style="{StaticResource MyStyleGreen}" Content="=" Click="BTN_Equals_Click"/>
         <Button Grid.Row="4" Grid.Column="3" Name="BTN_Devise" Style="{StaticResource MyStyleGreen}" Content="/" Click="BTN_Devise_Click"/>
-
+        <!--ligne5-->
         <Button Grid.Row="5" Grid.Column="0" Name="BTN_COS" Content="COS" Style="{StaticResource MyStyleGreen}" Click="BTN_COS_Click"/>
         <Button Grid.Row="5" Grid.Column="1" Name="BTN_SIN" Content="SIN" Style="{StaticResource MyStyleGreen}" Click="BTN_SIN_Click"/>
         <Button Grid.Row="5" Grid.Column="2" Name="BTN_TAN" Content="TAN" Style="{StaticResource MyStyleGreen}" Click="BTN_TAN_Click"/>
